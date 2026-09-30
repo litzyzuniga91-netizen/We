@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💙 Para mi Amigo 💙</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(
+    180deg,
+    #001d4d,
+    #004aad,
+    #00bfff);
+    text-align:center;
+    overflow-x:hidden;
+    color:white;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* Brillos */
+
+.fondo{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.brillo{
+    position:absolute;
+    font-size:25px;
+    animation:flotar 6s infinite;
+}
+
+@keyframes flotar{
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+
+/* Título */
+
+h1{
+    margin-top:25px;
+    font-size:2.2rem;
+
+    text-shadow:
+    0 0 10px white,
+    0 0 20px #00bfff,
+    0 0 40px #00bfff;
+
+    animation:bajar 1.5s ease;
+}
+
+@keyframes bajar{
+    from{
+        opacity:0;
+        transform:translateY(-80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Imagen */
+
+.ramo{
+    margin:25px auto;
+    width:90%;
+    max-width:500px;
+
+    animation:aparecer 2s ease;
+}
+
+.ramo img{
+    width:100%;
+    border-radius:25px;
+
+    box-shadow:
+    0 0 25px white,
+    0 0 50px #00bfff;
+
+    transition:.4s;
+}
+
+.ramo img:hover{
+    transform:scale(1.03);
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(200px) scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Nota / Carta */
+
+.nota{
+    background:#fffef5;
+    color:#222;
+    width:90%;
+    max-width:550px;
+    margin:20px auto;
+    padding:30px;
+    border-radius:20px;
+    border:4px dashed #4c8cff;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    transform:rotate(-2deg);
+    font-family:cursive;
+    position:relative;
+    animation:aparecerNota 3s ease;
+}
+
+@keyframes aparecerNota{
+
+    from{
+        opacity:0;
+        transform:rotate(-2deg) scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:rotate(-2deg) scale(1);
+    }
+}
+
+.nota h2{
+    color:#0066ff;
+    margin-bottom:15px;
+}
+
+.nota p{
+    line-height:1.8;
+    margin-bottom: 10px;
+}
+
+/* Frase */
+
+.frase{
+    margin-top:20px;
+    font-style:italic;
+    font-size:1.2rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Botón */
+
+.boton{
+
+    margin:30px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#005eff;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 15px white;
+
+    transition:.3s;
+}
+
+.boton:hover{
+    transform:scale(1.1);
+}
+
+/* CARRO */
+
+.carro-super{
+    position:fixed;
+    top:120px;
+    font-size:60px;
+    z-index:999;
+    animation:carroCruza 8s linear infinite;
+}
+
+@keyframes carroCruza{
+    0%{
+        left:-200px;
+    }
+    100%{
+        left:110%;
+    }
+}
+
+/* FUEGOS */
+
+#fuegos{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:80px;
+    animation:explosion 1s infinite;
+    z-index:1000;
+}
+
+@keyframes explosion{
+    0%{
+        transform:translate(-50%,-50%) scale(.5);
+        opacity:0;
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1.5);
+        opacity:1;
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(.5);
+        opacity:0;
+    }
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+    h1{
+        font-size:1.8rem;
+    }
+    .nota{
+        transform:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Carro animado cruzando la pantalla -->
+<div class="carro-super">
+🏎️💨
+</div>
+
+<!-- Fuegos artificiales ocultos que se activan con el botón -->
+<div id="fuegos">
+✨💙✨💙✨
+</div>
+
+<div class="fondo">
+    <div class="brillo" style="left:10%;top:80%;">✨</div>
+    <div class="brillo" style="left:25%;top:90%;">💙</div>
+    <div class="brillo" style="left:45%;top:85%;">✨</div>
+    <div class="brillo" style="left:70%;top:92%;">💙</div>
+    <div class="brillo" style="left:85%;top:88%;">✨</div>
+</div>
+
+<h1>🏁💙 Para Mi Gran Amigo 💙🏁</h1>
+
+<div class="ramo">
+    <!-- Reemplaza "ramo-hotwheels.png" por la ruta o nombre de tu imagen real -->
+      <img src="https://i.ibb.co/CsYc3NN1/copilot-image-1790739300998.png" alt="copilot-image-1790739300998" bo
+ alt="Ramo de Hot Wheels">
+</div>
+
+<!-- Chincheta decorativa arriba de la carta -->
+<div style="font-size:45px; margin-bottom: -20px; position: relative; z-index: 10;">
+📌
+</div>
+
+<div class="nota">
+
+    <h2>💙 Para mi gran amigo 💙</h2>
+
+    <p>
+    Las rosas azules representan lo especial y única que es nuestra amistad.
+    </p>
+
+    <p>
+    Los autos representan cada aventura,
+    cada risa y cada meta compartida.
+    </p>
+
+    <p>
+    Que siempre tengas la fuerza para seguir adelante,
+    la velocidad para perseguir tus sueños
+    y el valor para conquistar nuevos caminos.
+    </p>
+
+    <p>
+    🏎️💨 Nunca dejes de avanzar.
+    </p>
+
+    <p>
+    ✨ Gracias por tu amistad. ✨
+    </p>
+
+</div>
+
+<div class="frase">
+    🚗 "Los mejores amigos también comparten las mejores aventuras." 💙
+</div>
+
+<button class="boton" onclick="sorpresa()">
+    🏎️ Mensaje Sorpresa 🏎️
+</button>
+
+<script>
+function sorpresa(){
+    const fuegos = document.getElementById("fuegos");
+    fuegos.style.display = "block";
+
+    setTimeout(() => {
+        fuegos.style.display = "none";
+    }, 3000);
+
+    alert("💙 Gracias por ser un gran amigo 🏁");
+}
+</script>
+
+</body>
+</html>
